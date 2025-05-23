@@ -1,0 +1,22 @@
+{
+  "ModDirectoryStructure": "OblivionRemastered\\Content\\Dev\\ObvData\\Data\\MagicLoader\\",
+  "IncludedSections": [ "ST_FullNames" ],
+  "LocalizationSource": "Localization",
+  "OutputDirectory": "MagicLoader",
+  "ModName": "MarkQuestDungeons",
+  "ModFiles": {
+    "MarkQuestDungeonsFirstFile.json": {
+      "FullNamesEditEntries": [
+        "LOC_FN_MQ02JauffreD2"
+      ]
+    },
+    "MarkQuestDungeonsSecondFile.json": {
+      "FullNamesEditEntries": [
+        "LOC_FN_MQ02JauffreD2"
+      ],
+      "FullNameEntries": [
+        "LOC_FN_Miscarcand01"
+      ]
+    }
+  }
+}

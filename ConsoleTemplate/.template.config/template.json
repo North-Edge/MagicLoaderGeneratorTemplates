@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "identity": "NorthEdge.MagicLoaderGenerator.ConsoleTemplate",
+  "classifications": [ "Common", "Console", "MagicLoader" ],  
+  "name": "MagicLoader generator mod project",
+  "sourceName":"MagicLoaderConsoleMod",
+  "preferNameDirectory": true,
+  "shortName": "mlg-mod",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
