@@ -1,36 +1,42 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-		<PackageType>Template</PackageType>
-		<PackageVersion>1.1.0</PackageVersion>
-		<PackageTags>dotnet-new</PackageTags>
+        <PackageType>Template</PackageType>
+        <PackageVersion>1.1.1</PackageVersion>
+        <PackageTags>dotnet-new</PackageTags>
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <AssemblyName>NorthEdge.GameGrid</AssemblyName>
-        <RootNamespace>NorthEdge.GameGrid</RootNamespace>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>MagicLoader Generator .NET templates</Title>
         <Authors>NorthEdge</Authors>
         <Description>.NET templates for MagicLoader Generator (for use with dotnet new)</Description>
         <PackageProjectUrl>https://github.com/North-Edge/MagicLoaderGeneratorTemplates</PackageProjectUrl>
         <RepositoryUrl>https://github.com/North-Edge/MagicLoaderGeneratorTemplates</RepositoryUrl>
-	    <IncludeContentInPack>true</IncludeContentInPack>
-		<IncludeBuildOutput>false</IncludeBuildOutput>
-		<ContentTargetFolders>content</ContentTargetFolders>
-		<NoDefaultExcludes>true</NoDefaultExcludes>
-		<PackageReadmeFile>readme.md</PackageReadmeFile>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageId>NorthEdge.MagicLoaderGenerator.Templates</PackageId>
-		<RepositoryType>git</RepositoryType>
-		<LangVersion>latest</LangVersion>
-		<NoWarn>$(NoWarn);NU5128</NoWarn>
+        <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageId>NorthEdge.MagicLoaderGenerator.Templates</PackageId>
+        <RepositoryType>git</RepositoryType>
+        <LangVersion>latest</LangVersion>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <IsPackable>true</IsPackable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="SolutionTemplate\**\*;ConsoleTemplate\**\*" Exclude="Output\**;SolutionTemplate\**\bin\**;SolutionTemplate\**\obj\**;SolutionTemplate\**\.vs\**;SolutionTemplate\**\.idea\**;SolutionTemplate\**\.git\**;ConsoleTemplate\**\bin\**;ConsoleTemplate\**\obj\**;ConsoleTemplate\**\.vs\**;ConsoleTemplate\**\.git\**;" />
-    <Compile Remove="**\*" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="readme.md" Visible="true" Pack="true" PackagePath="" />
-    <None Include="LICENSE" Visible="true" Pack="true" PackagePath="" />
-  </ItemGroup>  
+    <Target Name="Install templates locally" AfterTargets="Pack">
+        <Exec ContinueOnError="True" Command="dotnet new uninstall $(PackageId)" />
+        <Exec Command="dotnet new install &quot;$(BaseOutputPath)bin\$(PackageId).$(PackageVersion).nupkg&quot;" />
+    </Target>
+
+    <ItemGroup>
+        <Content Include="SolutionTemplate\**\*;ConsoleTemplate\**\*" Exclude="Output\**;SolutionTemplate\**\bin\**;SolutionTemplate\**\obj\**;SolutionTemplate\**\.vs\**;SolutionTemplate\**\.idea\**;SolutionTemplate\**\.git\**;ConsoleTemplate\**\bin\**;ConsoleTemplate\**\obj\**;ConsoleTemplate\**\.vs\**;ConsoleTemplate\**\.git\**;" />
+        <Compile Remove="**\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="readme.md" Visible="true" Pack="true" PackagePath="" />
+        <None Include="LICENSE" Visible="true" Pack="true" PackagePath="" />
+    </ItemGroup>
 </Project>
