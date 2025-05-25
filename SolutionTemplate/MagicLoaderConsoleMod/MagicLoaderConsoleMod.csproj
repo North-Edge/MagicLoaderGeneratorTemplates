@@ -22,10 +22,14 @@
         <LocalizationItems Include="$(SolutionDir)Localization\**" Exclude="$(SolutionDir)Localization\.gitignore">
             <InProject>false</InProject>
         </LocalizationItems>
+        <InputItems Include="$(SolutionDir)Input\**" Exclude="$(SolutionDir)Input\.gitignore">
+            <InProject>false</InProject>
+        </InputItems>
     </ItemGroup>
 
     <Target Name="Copy localization files" AfterTargets="Build">
         <Copy SourceFiles="@(LocalizationItems)" DestinationFiles="@(LocalizationItems->'$(OutputPath)\Localization\%(RecursiveDir)%(Filename)%(Extension)')"/>
+        <Copy SourceFiles="@(InputItems)" DestinationFiles="@(InputItems->'$(OutputPath)\Input\%(RecursiveDir)%(Filename)%(Extension)')"/>
     </Target>
 
 </Project>
