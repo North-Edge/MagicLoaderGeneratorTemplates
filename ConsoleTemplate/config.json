@@ -3,14 +3,14 @@
   "IncludedSections": [ "ST_FullNames" ],
   "LocalizationSource": "Localization",
   "OutputDirectory": "MagicLoader",
-  "ModName": "MarkQuestDungeons",
+  "ModName": "MagicLoaderConsoleMod",
   "ModFiles": {
-    "MarkQuestDungeonsFirstFile.json": {
+    "MagicLoaderConsoleModFirstFile.json": {
       "FullNamesEditEntries": [
         "LOC_FN_MQ02JauffreD2"
       ]
     },
-    "MarkQuestDungeonsSecondFile.json": {
+    "MagicLoaderConsoleModSecondFile.json": {
       "FullNamesEditEntries": [
         "LOC_FN_MQ02JauffreD2"
       ],
