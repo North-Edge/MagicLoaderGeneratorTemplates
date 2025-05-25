@@ -14,3 +14,13 @@ These templates are meant to facilitate the creation of mods based o the [MagicL
 
 ## Uninstalling
 `dotnet new uninstall NorthEdge.MagicLoaderGenerator.Templates`
+
+# Changelog
+## Version 1.1.0
+- Initial stable release
+## Version 1.1.1
+- Remove the root namespace property in the project file
+## Version 1.2.0
+- Bump the version of the MagicLoaderGenerator package to 1.2.0
+- Add a target to automatically install the generated templates
+- Add the `Input` folder to the project structure 
