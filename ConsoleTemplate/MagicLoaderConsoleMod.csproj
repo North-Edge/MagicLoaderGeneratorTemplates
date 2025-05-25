@@ -9,27 +9,25 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.2.1" />
+        <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.2.1" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="config.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+        <None Update="config.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="readme.md">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="LICENSE">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Input\readme.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Localization\readme.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
-
-    <ItemGroup>
-        <LocalizationItems Include="$(MSBuildThisFileDirectory)Localization\**" Exclude="$(MSBuildThisFileDirectory)Localization\.gitignore">
-            <InProject>false</InProject>
-        </LocalizationItems>
-        <InputItems Include="$(MSBuildThisFileDirectory)Input\**" Exclude="$(MSBuildThisFileDirectory)Input\.gitignore">
-            <InProject>false</InProject>
-        </InputItems>
-    </ItemGroup>
-
-    <Target Name="Copy localization files" AfterTargets="Build">
-        <Copy SourceFiles="@(LocalizationItems)" DestinationFiles="@(LocalizationItems->'$(OutputPath)\Localization\%(RecursiveDir)%(Filename)%(Extension)')"/>
-        <Copy SourceFiles="@(InputItems)" DestinationFiles="@(InputItems->'$(OutputPath)\Input\%(RecursiveDir)%(Filename)%(Extension)')"/>
-    </Target>
 
 </Project>

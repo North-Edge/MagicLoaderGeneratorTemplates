@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.2.1</PackageVersion>
+        <PackageVersion>1.2.2</PackageVersion>
         <PackageTags>dotnet-new</PackageTags>
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -31,7 +31,7 @@
     </Target>
 
     <ItemGroup>
-        <Content Include="SolutionTemplate\**\*;ConsoleTemplate\**\*" Exclude="Output\**;SolutionTemplate\**\bin\**;SolutionTemplate\**\obj\**;SolutionTemplate\**\.vs\**;SolutionTemplate\**\.idea\**;SolutionTemplate\**\.git\**;ConsoleTemplate\**\bin\**;ConsoleTemplate\**\obj\**;ConsoleTemplate\**\.vs\**;ConsoleTemplate\**\.git\**;" />
+        <Content Include="SolutionTemplate\**\*;ConsoleTemplate\**\*" Exclude="**\Output\**;SolutionTemplate\**\bin\**;SolutionTemplate\**\obj\**;SolutionTemplate\**\.vs\**;SolutionTemplate\**\.idea\**;SolutionTemplate\**\.git\**;ConsoleTemplate\**\bin\**;ConsoleTemplate\**\obj\**;ConsoleTemplate\**\.vs\**;ConsoleTemplate\**\.git\**;" />
         <Compile Remove="**\*" />
     </ItemGroup>
 
