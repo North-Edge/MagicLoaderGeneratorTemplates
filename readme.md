@@ -25,3 +25,5 @@ These templates are meant to facilitate the creation of mods based o the [MagicL
 - Add a target to automatically install the generated templates
 - Fix the content of the config for the Console template
 - Add the `Input` folder to the project structure 
+## Version 1.2.1
+- Bump the version of the MagicLoaderGenerator package to 1.2.1

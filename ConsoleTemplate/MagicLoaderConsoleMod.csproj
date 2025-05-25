@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.2.0" />
+      <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.2.1" />
     </ItemGroup>
 
     <ItemGroup>
