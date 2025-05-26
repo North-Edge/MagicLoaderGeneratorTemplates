@@ -27,3 +27,5 @@ These templates are meant to facilitate the creation of mods based o the [MagicL
 - Add the `Input` folder to the project structure 
 ## Version 1.2.1
 - Bump the version of the MagicLoaderGenerator package to 1.2.1
+## Version 1.2.1
+- Bump the version of the MagicLoaderGenerator package to 1.3.0
