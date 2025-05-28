@@ -1,5 +1,4 @@
-﻿using MagicLoaderGenerator.Localization.Providers;
-using MagicLoaderGenerator.Filesystem.Generators;
+﻿using MagicLoaderGenerator.Filesystem.Generators;
 using Microsoft.Extensions.Configuration;
 using MagicLoaderGenerator.Filesystem;
 using MagicLoaderGenerator;
@@ -7,7 +6,7 @@ using MagicLoaderGenerator;
 var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
                                         .AddJsonFile("config.json", optional: false);
 var appConfig = new AppConfig(builder.Build());
-var mod = new MagicLoaderMod(new JsonLocalizationProvider(appConfig), appConfig);
+var mod = new MagicLoaderMod(appConfig);
 
 var outputDir = mod.Generate(new ZipOutputGenerator(appConfig));
 
